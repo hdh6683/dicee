@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,6 +19,27 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Center(
+      child: Row(
+        children: <Widget>[
+          Expanded(
+            child: IconButton(
+              icon: Image.asset('images/dice1.png'),
+              onPressed: () {
+                print('Left button got pressed.');
+              },
+            ),
+          ),
+          Expanded(
+            child: IconButton(
+              icon: Image.asset('images/dice2.png'),
+              onPressed: () {
+                print('Right button got pressed.');
+              },
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
